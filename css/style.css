@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background: #9bebdf;
+    color: #ef0c0c;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: #333;
+    font-size: 15px;
+    padding: 6px 10px;
+    text-decoration: underline;
+}
+
+nav ul li a:hover {
+    background: #c5e110;
+}
+
+
+#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 22px;
+    cursor:pointer;
+}
+
+
+header {
+    height: 500px;
+    background-image: url("https://wandervista.files.wordpress.com/2018/12/img_6839.jpg?w=1200");
+    background-repeat: no-repeat;
+    background-size: cover;     
+    background-position: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(207, 0, 0);
+    position: relative;
+    font-size: 20px;
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+}
+
+
+section {
+    padding: 60px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #26da15;
+}
+
+p {
+    font-size: px;
+    color: rgb(17, 17, 219);
+    text-align: center;
+}
+h3{
+    font-size: 20px;;
+}
+
+
+.places-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.card {
+    width: 260px;
+    background: rgb(165, 201, 19);
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.15);
+}
+
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.gallery img {
+    width: 250px;
+    height: 180px;
+    border-radius: 8px;
+    transition: 0.7s;
+}
+
+.gallery img:hover {
+    transform: scale(1.2);
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+@media (max-width: 768px) {
+
+   
+    
+    .hamburger {
+        display: block;
+    }
+
+    
+    nav .ul {
+        display:flex;
+    }
+
+    
+    .menu {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: white;
+        width: 200px;
+        display: none;
+        flex-direction: column;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+  
+    #menu-toggle:checked+.hamburger+ .menu {
+        display: flex;
+    }
+
+    .menu li {
+        padding: 10px 0;
+    }
+
+    .menu li a {
+        color: #333;
+        display: block;
+        width: 100%;
+    }
+}
